@@ -6,4 +6,4 @@ before_install:
     - docker build -t ameyad22/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run ameyad22/docker-react npm run test -- --coverage
+    - docker run -e CI=true ameyad22/docker-react npm run test
